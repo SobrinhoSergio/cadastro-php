@@ -28,12 +28,13 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 </head>
 <body>
 
 
 <div class="container mt-5">
-        <a href="index.php" class="btn btn-primary">Voltar para Cadastro</a>
+        <a href="index.php" class="btn btn-primary"><i class="bi bi-arrow-left"></i></a>
         <h2>Dados Cadastrados</h2>
         <?php
             if (!empty($successMessage)) {
@@ -50,6 +51,8 @@ if (isset($_GET['id'])) {
                     <th>Estado</th>
                     <th>Número de Telefone</th>
                     <th>Profissão</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -70,10 +73,10 @@ if (isset($_GET['id'])) {
                     echo "<td>" . $row['numero_de_telefone'] . "</td>";
                     echo "<td>" . $row['profissao'] . "</td>";
                     echo '<td>
-                            <a href="editar.php?id=' . $row['id'] . '" class="btn btn-warning">Editar</a>
+                            <a href="editar.php?id=' . $row['id'] . '" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
                           </td>';
                           echo '<td>
-                            <a href="dados.php?id=' . $row['id'] . '" class="btn btn-danger">Excluir</a>
+                            <a href="dados.php?id=' . $row['id'] . '" class="btn btn-danger"><i class="bi bi-archive"></i></a>
                           </td>';
                     echo "</tr>";
                 }

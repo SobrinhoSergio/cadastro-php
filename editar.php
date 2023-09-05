@@ -75,8 +75,38 @@ if (isset($_GET['id'])) {
             </div>
             <div class="form-group">
                 <label for="estado">Estado:</label>
-                <input type="text" class="form-control" id="estado" name="estado" value="<?php echo $registro['estado']; ?>" required>
+                <select class="form-control" id="estado" name="estado" required>
+                    <option value="">Selecione um estado</option>
+                    <option value="AC" <?php if ($registro['estado'] === 'AC') echo 'selected'; ?>>Acre</option>
+                    <option value="AL" <?php if ($registro['estado'] === 'AL') echo 'selected'; ?>>Alagoas</option>
+                    <option value="AP" <?php if ($registro['estado'] === 'AP') echo 'selected'; ?>>Amapá</option>
+                    <option value="AM" <?php if ($registro['estado'] === 'AM') echo 'selected'; ?>>Amazonas</option>
+                    <option value="BA" <?php if ($registro['estado'] === 'BA') echo 'selected'; ?>>Bahia</option>
+                    <option value="CE" <?php if ($registro['estado'] === 'CE') echo 'selected'; ?>>Ceará</option>
+                    <option value="DF" <?php if ($registro['estado'] === 'DF') echo 'selected'; ?>>Distrito Federal</option>
+                    <option value="ES" <?php if ($registro['estado'] === 'ES') echo 'selected'; ?>>Espírito Santo</option>
+                    <option value="GO" <?php if ($registro['estado'] === 'GO') echo 'selected'; ?>>Goiás</option>
+                    <option value="MA" <?php if ($registro['estado'] === 'MA') echo 'selected'; ?>>Maranhão</option>
+                    <option value="MT" <?php if ($registro['estado'] === 'MT') echo 'selected'; ?>>Mato Grosso</option>
+                    <option value="MS" <?php if ($registro['estado'] === 'MS') echo 'selected'; ?>>Mato Grosso do Sul</option>
+                    <option value="MG" <?php if ($registro['estado'] === 'MG') echo 'selected'; ?>>Minas Gerais</option>
+                    <option value="PA" <?php if ($registro['estado'] === 'PA') echo 'selected'; ?>>Pará</option>
+                    <option value="PB" <?php if ($registro['estado'] === 'PB') echo 'selected'; ?>>Paraíba</option>
+                    <option value="PR" <?php if ($registro['estado'] === 'PR') echo 'selected'; ?>>Paraná</option>
+                    <option value="PE" <?php if ($registro['estado'] === 'PE') echo 'selected'; ?>>Pernambuco</option>
+                    <option value="PI" <?php if ($registro['estado'] === 'PI') echo 'selected'; ?>>Piauí</option>
+                    <option value="RJ" <?php if ($registro['estado'] === 'RJ') echo 'selected'; ?>>Rio de Janeiro</option>
+                    <option value="RN" <?php if ($registro['estado'] === 'RN') echo 'selected'; ?>>Rio Grande do Norte</option>
+                    <option value="RS" <?php if ($registro['estado'] === 'RS') echo 'selected'; ?>>Rio Grande do Sul</option>
+                    <option value="RO" <?php if ($registro['estado'] === 'RO') echo 'selected'; ?>>Rondônia</option>
+                    <option value="RR" <?php if ($registro['estado'] === 'RR') echo 'selected'; ?>>Roraima</option>
+                    <option value="SC" <?php if ($registro['estado'] === 'SC') echo 'selected'; ?>>Santa Catarina</option>
+                    <option value="SP" <?php if ($registro['estado'] === 'SP') echo 'selected'; ?>>São Paulo</option>
+                    <option value="SE" <?php if ($registro['estado'] === 'SE') echo 'selected'; ?>>Sergipe</option>
+                    <option value="TO" <?php if ($registro['estado'] === 'TO') echo 'selected'; ?>>Tocantins</option>
+                </select>
             </div>
+
             <div class="form-group">
                 <label for="telefone">Número de Telefone:</label>
                 <input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo $registro['numero_de_telefone']; ?>" required>

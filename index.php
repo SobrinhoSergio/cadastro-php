@@ -39,13 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Pessoas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 </head>
 <body>
 
 
     <div class="container mt-5">
         
-        <a href="dados.php" class="btn btn-warning">Exibir Dados Cadastrados</a>
+        <a href="dados.php" class="btn btn-warning"><i class="bi bi-arrow-right"></i></a>
 
         <h2>Cadastro de Pessoas</h2>
         <?php if (!empty($mensagem)) : ?>
@@ -68,8 +69,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="form-group">
                 <label for="estado">Estado:</label>
-                <input type="text" class="form-control" id="estado" name="estado" required>
+                <select class="form-control" id="estado" name="estado" required>
+                    <option value="">Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
             </div>
+
             <div class="form-group">
                 <label for="telefone">Número de Telefone:</label>
                 <input type="tel" class="form-control" id="telefone" name="telefone" required pattern="[0-9]{10,}" title="Digite apenas números, pelo menos 10 dígitos">
@@ -86,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-  
+    <script src="./script.js"></script>
     <script>
         // Limpar o formulário após a submissão
         document.addEventListener('DOMContentLoaded', function() {
