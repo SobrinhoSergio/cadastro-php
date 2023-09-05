@@ -57,8 +57,6 @@ if (isset($_GET['id'])) {
             </thead>
             <tbody>
                 <?php
-
-                require_once 'conexao.php';
                 
                 $stmt = $pdo->prepare("SELECT * FROM pessoas");
                 $stmt->execute();
